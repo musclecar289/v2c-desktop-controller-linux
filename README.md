@@ -53,6 +53,7 @@ You can optionally specify some command-line arguments.
        - backspace 3 times done
        - backspace 2 spaces cancel backspace 1 done
 
+### Typing Mode Schema
 ![Typing Mode Schema](typingModeSchema.png)
 
 ## Stream Mode
