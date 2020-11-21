@@ -24,6 +24,14 @@ public class Macro {
     String directive;
     Boolean enabled;
 
+    public Macro(String name, String description, String[] keypresses, String directive, Boolean enabled) {
+        this.name = name;
+        this.description = description;
+        this.keypresses = keypresses;
+        this.directive = directive;
+        this.enabled = enabled;
+    }
+
     public String getName() {
         return name;
     }
@@ -65,7 +73,7 @@ public class Macro {
     }
 
     public void execute() {
-        System.out.println("TRYING TO EXECUTE MACRO " + name);    
+        System.out.println("TRYING TO EXECUTE MACRO " + name);
         try {
             KeyboardRobot keyboardCommandRobot;
             keyboardCommandRobot = new KeyboardRobot();
@@ -78,8 +86,8 @@ public class Macro {
             }
 
         } catch (Exception e) {
-            //TODO: handle exception
-        } 
-        
+            // TODO: handle exception
+        }
+
     }
 }

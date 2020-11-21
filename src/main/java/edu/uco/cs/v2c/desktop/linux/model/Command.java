@@ -15,7 +15,7 @@
  */
 package edu.uco.cs.v2c.desktop.linux.model;
 
-import edu.uco.cs.v2c.desktop.linux.command.TerminalCommandJava;
+import edu.uco.cs.v2c.desktop.linux.command.TerminalCommand;
 
 public class Command {
     String name;
@@ -23,6 +23,14 @@ public class Command {
     String[] executables;
     String directive;
     Boolean enabled;
+
+    public Command(String name, String description, String[] executables, String directive, Boolean enabled) {
+        this.name = name;
+        this.description = description;
+        this.executables = executables;
+        this.directive = directive;
+        this.enabled = enabled;
+    }
 
     public String getName() {
         return name;
@@ -65,9 +73,9 @@ public class Command {
     }
 
     public void execute() {
-        TerminalCommandJava terminal;
+        TerminalCommand terminal;
         for (int i = 0; i < executables.length; i++) {
-            terminal = new TerminalCommandJava();
+            terminal = new TerminalCommand();
             terminal.ExecuteCommand(executables[i]);
         }
     }
