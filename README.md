@@ -93,7 +93,6 @@ To enter Typing Mode
 To enter Streaming Mode
   > alteration streaming
 
-### Behavior: 
   - same as typing mode, except if your word is not a keypress it will type that word
   - Features
     - alteration select - begin cursor selection at selected location
